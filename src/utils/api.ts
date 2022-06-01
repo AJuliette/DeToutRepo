@@ -21,3 +21,10 @@ export const getQuote = async () => {
     quote: `“${data.content}” — ${data.author}`,
   };
 };
+
+export const getOwen = async () => {
+  const { data } = await axios.get(
+    'https://owen-wilson-wow-api.herokuapp.com/wows/random'
+  );
+  return data;
+}
